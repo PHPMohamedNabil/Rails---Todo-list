@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2> Edit Post Content</h2>
+
+<%= form_for :post,url:post_path(@post),method: :patch do |f| %>
+   <% if @post.errors.any? %>
+<% @post.errors.full_messages.each do |msg| %>
+<div class="alert alert-danger">
+   <%= msg %>
+   
+</div>
+
+<% end %>
+
+<% end %>
+   <div class="form-group">
+   	<%= f.label :title %>
+   
+   	<%= f.text_field :title,{:class => 'form-control'} %>
+   </div>
+
+   <div class="form-group">
+
+   	<%= f.label :body %>
+   	<br>
+   	<%= f.text_area :body,{:class => "form-control"} %>
+   </div>
+
+   <div class="form-group">
+   	<%= f.submit :Save,{:class => 'btn btn-primary'} %>
+   </div>
+
+
+<% end %>
+
+
+
+</body>
+</html>
