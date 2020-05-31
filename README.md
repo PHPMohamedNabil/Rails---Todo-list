@@ -1,4 +1,4 @@
-# README
+# Todo list
 
 Ruby on Rails Todo list app for Practicing on crud opreations in rails and Schedual your daily Tasks as a notes
 
